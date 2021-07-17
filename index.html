@@ -8,13 +8,122 @@
 
 	<title>Cheat sheet</title>
 
-	<!-- <link rel="stylesheet" href="/fe-program/assets/css/style.css?v=585436efe635e4a4688520d8ea2b65bbfcf91036"> -->
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-	<h1>Cheat sheet</h1>
+	<div class="wrapper">
+		<div class="header">
+			<h1 class="title">String</h1>
+		</div>
+		<div class="methods">
+			<ul>
+				<li>
+					<p>Використовуємо <code>` `` `</code></p>
+					<code>`${3+4} users`</code><br><br>
+					<code>`${defineUsers()} users`</code>
+				</li>
+				<li>
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt">charAt</a>
+					– повертає символ по індексу або <code class="language-plaintext highlighter-rouge">''</code><br>
+
+					<code>
+					'Abcde'.length === 5 <br>
+					'Abcde'.charAt(0) === 'A'<br>
+					'Abcde'[0] === 'A'<br>
+					'Abcde'.charAt(20) === ''<br>
+					'Abcde'[20] === undefined<br>
+					</code>
+				</li>
+				<li>
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes">includes</a>
+					– <code>true</code>/<code>false</code> якщо строка містить підстроку</li>
+				</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf</a>
+					– index або <code>-1</code>, починаючи з якого підстрока входить в строку</li>
+
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf">lastIndexOf</a>
+					– index або <code>-1</code> останнього входження</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith">startsWith</a>
+					– <code>true</code>/<code>false</code> якщо строка починається з підстроки</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith">endsWith</a>
+					– <code>true</code>/<code>false</code> якщо строка закінчується підстрокой</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare">localeCompare</a>
+					–
+					<ul>
+						<li>
+							<code>-1</code> якщо строка стоїть раніше підстроки в словарі
+						</li>
+						<li>
+							<code>-1</code> якщо строка стоїть пізніже підстроки в словарі
+						</li>
+						<li>
+							<code>0</code> якщо вони рівні
+						</li>
+					</ul>
+				</li>
+
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice">slice</a>
+					– взять частину строки<br>
+					<code>
+					'Abcde'.slice(1, 3) === 'bc'<br>
+					'Abcde'.slice() === 'Abcde'<br>
+					'Abcde'.slice(-3, -1) === 'cd'<br>
+					'Abcde'.slice(-2) === 'de'<br>
+					</code>
+				</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace</a>
+					– заміняє перше входження підстроки на другу підстроку<br>
+					<code>
+					'Abababab'.replace('ab', '12') === 'Ab12abab'<br>
+					'Abababab'.replace(/ab/i, '12') === '12ababab'<br>
+					'Abababab'.replace(/ab/g, '12') === 'Ab121212'<br>
+					'Abababab'.replace(/ab/ig, '12') === '12121212'<br>
+					</code>
+				</li>
+
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>
+					– перевести в верхній регістр</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase</a>
+					– перевести в нижній регістр</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim">trim</a>
+					– видаляє пробіли по краям</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart">trimStart</a>
+					– видаляє пробіли спочатку
+				</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">trimEnd</a>
+					– видаляє пробіли з кінця
+				</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat">repeat</a>
+					– повторює строку вказану кількість раз</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart">padStart</a>
+					– доповнює строку до потрібной довжини символами спочатку</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd">padEnd</a>
+					– доповнює строку до потрібной довжини символами з кінця</li>
+			</ul>
+
+		</div>
 
 
+
+	</div>
 </body>
 
 </html>
