@@ -38,6 +38,32 @@
 				</li>
 				<li>
 					<a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt">str.codePointAt(index)</a>
+					– повертає код для символа по індексу<br>
+
+					<code>
+					"z".codePointAt(0) === 122<br>
+					"Z".codePointAt(0) === 90<br>
+					</code>
+				</li>
+				<li>
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint">String.fromCodePoint(code)</a>
+					– повертає символ по його коду<br>
+					<code>
+					String.fromCodePoint(90) === "Z"<br>
+					</code>
+				</li>
+				<li>
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat">concat</a>
+					– об'єднує текст з двох або більше рядків і повертає новий рядок.<br>
+					<code>
+										"hello ".concat("world", "!") === "hello world!"<br>
+										</code>
+				</li>
+				<li>
+					<a
 						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes">includes</a>
 					– <code>true</code>/<code>false</code> якщо строка містить підстроку</li>
 				</li>
@@ -71,14 +97,27 @@
 				</li>
 
 				<li><a
-						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice">slice</a>
-					– взять частину строки<br>
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice">slice(start,
+						end)</a>
+					– взять частину строки (від start до end, не включає end. Можна передати від'ємні значення)<br>
 					<code>
 					'Abcde'.slice(1, 3) === 'bc'<br>
 					'Abcde'.slice() === 'Abcde'<br>
 					'Abcde'.slice(-3, -1) === 'cd'<br>
 					'Abcde'.slice(-2) === 'de'<br>
 					</code>
+				</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring(start,
+						end)</a>
+					– взять частину строки (від start до end. Від'ємне значення буде рівне 0)<br>
+
+				</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr">substr(start,
+						length)</a>
+					– взять частину строки (length символів, починая від start. start може бути від'ємним)<br>
+
 				</li>
 				<li><a
 						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace</a>
@@ -117,6 +156,24 @@
 				<li><a
 						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd">padEnd</a>
 					– доповнює строку до потрібной довжини символами з кінця</li>
+
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">match</a>
+					– повертає отримані результати збігу при зіставленні рядка з регулярним виразом.<br>
+					<code>
+								"hello world".match(/[a-z]/gi) === ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"]
+							
+								</code>
+				</li>
+				<li><a
+						href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search">search</a>
+					– виконує пошук зіставлення між регулярним виразом і цим рядком. Повертає індекс першого зіставлення
+					з регулярним виразом всередині рядка. В іншому випадку метод поверне -1.<br>
+					<code>
+												"hello world".search(/wor/gi) === 6
+											
+												</code>
+				</li>
 			</ul>
 
 		</div>
