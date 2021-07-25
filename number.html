@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Number cheat sheet</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1 class="title">String</h1>
+        </div>
+        <div class="methods">
+            <ul>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor</a>
+                    – округлює в меншу сторону</li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">Math.ceil</a>
+                    – округлює в більшу сторону</li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round</a>
+                    – округлює до найближчого цілого</li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random</a>
+                    – Повертає псевдовипадкове число в діапазоні від 0 (включно) до 1 (але не включаючи 1)</li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">Math.pow(n,power)</a>
+                    – Повертає число n, зведена в ступінь power</li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max">Math.max(a,b,c)</a>
+                    – Повертає максимальне число з переданих аргументів</li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min(a,b,c)</a>
+                    – Повертає мінімальне число з переданих аргументів</li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">num.toString(base)</a>
+                    – повертає строкове представлення числа num в системі числення base(від 2 до 36, по дефолту
+                    10)<br><br>
+                    <code>
+                                        (17).toString() === "17" <br>
+                                        (17).toString(16) === "11" <br>
+                                        (17).toString(2) === "10001" <br>
+                                        (17).toString(8) === "21" <br>
+                    </code>
+                </li>
+                <li><a
+                        href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">num.toFixed(n)</a>
+                    – округлює число до n знаків після коми і повертає строкове представлення результату.<br><br>
+                    <code>
+                                                        (12.34).toFixed() === "12" <br>
+                                                        (12.34).toFixed(1) === "12.3" <br>
+                                                        (12.34).toFixed(4) === "12.3400" <br>
+
+                                    </code>
+                </li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">isNaN(value)</a>
+                    – перетворює значення на число і перевіряє чи є воно NaN.<br><br>
+                    <code>
+                        isNaN(NaN) === true <br>
+                        isNaN("str") === true <br>
+                        isNaN("10") === false <br>
+                        isNaN(10) === false <br>
+                    </code>
+                </li>
+                <li><a
+                        href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isFinite">isFinite(value)</a>
+                    – перетворює аргумент в число і повертає true, якщо воно є звичайним числом, тобто НЕ NaN / Infinity
+                    / -Infinity<br><br>
+                    <code>
+                                        isFinite(NaN) === false <br>
+                                        isFinite("str") === false <br>
+                                        isFinite(Infinity) === false <br>
+                                        isFinite("10") === true <br>
+                                        isFinite(10) === true <br>
+                                    </code>
+                </li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt(value,radix)</a>
+                    – "читає" число з строки та повертає ціле число(за допомогою другого параметра можна задати систему
+                    числення. По дефолту це десяткова). Якщо число прочитати не вдалося, буде повернено NaN<br><br>
+                    <code>
+                        parseInt("100px") === 100 <br>
+                        parseInt("str") === NaN <br>
+                        parseInt("100.10px") === 100 <br>
+                        parseInt("100px", 8) === 64 <br>
+                    </code>
+                </li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat">parseFloat(value)</a>
+                    – "читає" число з строки та повертає число з плаваючою точкою. Якщо число прочитати не вдалося, буде
+                    повернено NaN<br><br>
+                    <code>
+                        parseFloat("100px") === 100 <br>
+                        parseFloat("str") === NaN <br>
+                        parseFloat("100.10px") === 100.1 <br>
+                        
+                    </code>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
