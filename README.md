@@ -1,1 +1,1 @@
-# GolotaMishka.github.io
+# JS cheat sheets
