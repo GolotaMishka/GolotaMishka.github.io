@@ -28,6 +28,13 @@ body {
 .header{
     border-bottom: 2px solid #bbbbbb;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.back-link{
+  background-color: transparent;
+  border: none;
 }
 
 nav {
@@ -43,8 +50,9 @@ nav a{
 }
 
 .title{
-    font-weight: 600;
-    font-style: italic;
+    font-weight: 300;
+    /* font-style: italic; */
+
 }
 
 ul{
