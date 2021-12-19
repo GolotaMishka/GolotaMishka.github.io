@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Array cheat sheet</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1 class="title">Array</h1>
+      </div>
+      <div class="methods">
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every"
+              >array.every(callbackFn)</a
+            >
+            – повертає true, якщо callbackFn повертає true для кожного елементу
+            масиву<br /><br />
+            <code>
+              [5, 6, 7, 8].every(item => item > 4) === true <br />
+              [5, 6, 7, 8].every(item => item > 6) === false <br />
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some"
+              >array.some(callbackFn)</a
+            >
+            – повертає true, якщо callbackFn повертає true хоча б для одного
+            елементу масиву<br /><br />
+            <code>
+              [5, 6, 7, 8].some(item => item === 7) === true <br />
+              [-5, -3, -1, 2].some(item => item > 0) === true <br />
+              [-5, -3, -1, 2].some(item => item > 3) === false <br />
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+              >array.filter(callbackFn)</a
+            >
+            – створює новий масив з усіма елементами, які проходять тест,
+            реалізований переданою callbackFn<br />
+            (якщо функція повертає true на ітерації, то елемент на цій ітерації
+            буде записаний в новий масив, якщо false - ні)<br /><br />
+            <code>
+              [4, -2, 4, -4, 1].filter(item => item > 0) -> [4, 4, 1]<br />
+              ["Mishka","Maks", "Svyat", "Dima"].filter(item =>
+              item.startsWith("M")) -> ["Mishka","Maks"]
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+              >array.forEach(callbackFn)</a
+            >
+            – виконує задану функцію один раз для кожного елемента масиву(нічого
+            не вовертає)<br /><br />
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"
+              >array1.concat(array2)
+            </a>
+            – об’єднує два або більше масивів. <br />
+            Цей метод не змінює існуючі масиви, а повертає новий масив.<br /><br />
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
+              >array.join(separator)</a
+            >
+            – створює та повертає новий рядок, об’єднуючи всі елементи в
+            масиві,<br />
+            розділяючи їх комами або вказаним рядком роздільника. Якщо масив
+            містить лише один елемент,<br />
+            то цей елемент буде повернуто без використання роздільника.)<brs /><br />
+            <code>
+              ['K', 'L', 'M'].join() -> K,L,M<br />
+              ['Hello', 'beautiful', 'web'].join(', ') -> Hello, beautiful, web
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
+              >array.sort()</a
+            >
+            – сортує елементи масиву на місці і повертає відсортований масив.
+            Порядок сортування<br />
+            за замовчуванням — висхідний (можна передати функцію, яка визначає
+            порядок сортування),<br />
+            заснований на перетворенні елементів у рядки, а потім порівнянні
+            їх<br />
+            послідовностей із значеннями одиниць коду UTF-16.<brs /><br />
+            <code>
+              ['K', 'L', 'M'].join() -> K,L,M<br />
+              ['Hello', 'beautiful', 'web'].join(', ') -> Hello, beautiful, web
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse"
+              >array.reverse()</a
+            >
+            – повертає масив на місце. Перший елемент масиву стає останнім, а
+            останній елемент масиву стає першим.<brs /><br />
+            <code> ['K', 'L', 'M'].reverse() -> ["M", "L", "K"]<br /> </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
+              >array.slice(start, end)</a
+            >
+            – повертає копію частини масиву в новий об’єкт масиву, вибраний від
+            початку до кінця (кінець не включено),<br />
+            де початок і кінець представляють індекс елементів у цьому масиві.
+            Початковий масив не буде змінено.<brs /><br />
+            <code>
+              ['K', 'L', 'M'].slice(2) -> ["M"]<br />
+              ['K', 'L', 'M'].slice(0, 1) -> ["K"]<br />
+              ['HTML', 'CSS', 'JS', 'React'].slice(1, 3) -> ["CSS", "JS"]<br />
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"
+              >array.splice(start, deleteCount, item1, item2, itemN)</a
+            >
+            – змінює вміст масиву, видаляючи або замінюючи елементи та/або
+            додаючи нові елементи на їх місце. Щоб отримати доступ до частини
+            масиву, не змінюючи його, див. slice().<brs /><br />
+            <code>
+              const months = ['Jan', 'March', 'April', 'June'];<br />
+              months.splice(1, 0, 'Feb');<br />
+              // inserts at index 1<br />
+              console.log(months);<br />
+              // expected output: Array ["Jan", "Feb", "March", "April",
+              "June"]<br /><br />
+
+              months.splice(4, 1, 'May');<br />
+              // replaces 1 element at index 4<br />
+              console.log(months);<br />
+              // expected output: Array ["Jan", "Feb", "March", "April",
+              "May"]<br />
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"
+              >array.includes(value)</a>
+            – визначає, чи містить масив певне значення серед своїх записів, повертаючи true чи false.<brs /><br />
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"
+              >array.indexOf(element)</a
+            >
+            – повертає перший індекс, за яким даний елемент можна знайти в масиві, або -1, якщо він відсутній.<brs /><br />
+            <code>
+            ['ant', 'bison', 'camel', 'duck', 'bison'].indexOf('bison') -> 1<br />
+            ['ant', 'bison', 'camel', 'duck', 'bison'].indexOf('wolf') -> -1<br />
+            </code>
+          </li>
+
+         
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf"
+              >array.lastIndexOf(element, fromIndex)</a
+            >
+            – повертає останній індекс, за яким даний елемент можна знайти в масиві, або -1, якщо він відсутній. 
+            Пошук у масиві здійснюється назад, починаючи з fromIndex.<brs /><br />
+            <code>
+            ['Dodo', 'Tiger', 'Penguin', 'Dodo'].lastIndexOf('Dodo') -> 3<br />
+            ['Dodo', 'Tiger', 'Penguin', 'Dodo'].lastIndexOf('Tiger') -> 1<br />
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+              >array.map(function(element, index, arr) { /* ... */ })</a
+            >
+            – створює новий масив, заповнений результатами виклику функції для кожного елемента в масиві<brs /><br />
+            <code>
+            [1, 4, 9, 16].map(x => x * 2)  ->  [2, 8, 18, 32]<br />
+            ['HTML', 'CSS', 'JS', 'React'].map((tech) => tech.length)  ->  [4, 3, 2, 5]<br />
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"
+              >array.pop()</a
+            >
+            – видаляє останній елемент з масиву і повертає цей елемент. Цей метод змінює довжину масиву.<brs /><br />
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"
+              >array.push(1,2)</a
+            >
+            – додає один або кілька елементів в кінець масиву і повертає нову довжину масиву.<brs /><br />
+            <code>
+                const animals = ['pigs', 'goats', 'sheep'];<br><br>
+
+                const count = animals.push('cows');<br>
+                console.log(count);<br>
+                // expected output: 4<br>
+                console.log(animals);<br>
+                // expected output: Array ["pigs", "goats", "sheep", "cows"]<br><br>
+                
+                animals.push('chickens', 'cats', 'dogs');<br>
+                console.log(animals);<br>
+                // expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]<br>
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"
+              >array.shift()</a
+            >
+            – видаляє перший елемент із масиву та повертає цей видалений елемент. Цей метод змінює довжину масиву.<brs /><br />
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift"
+              >array.unshift(1,2)</a
+            >
+            – додає один або кілька елементів на початок масиву і повертає нову довжину масиву<brs /><br />
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find"
+              >array.find(callbackFn)</a
+            >
+            – повертає значення першого елемента в наданому масиві, яке задовольняє надану функцію тестування.<br>
+             Якщо жодне значення не задовольняє функції тестування, повертається undefined.<brs /><br />
+            <code>
+                [5, 12, 8, 130, 44].find(element => element > 10)  ->  12<br>
+                [5, 12, 8, 130, 44].find(element => element === 17)  ->  undefined<br>
+            </code>
+          </li>
+
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"
+              >array.reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)</a
+            >
+            – виконує функцію зворотного виклику “reducer” для кожного елемента масиву,<br>
+             передаючи значення, що повертається з обчислення попереднього елемента.<br>
+             Кінцевим результатом запуску редюсера для всіх елементів масиву є одне значення.<brs /><br />
+            <code>
+                const array1 = [1, 2, 3, 4];<br>
+                const reducer = (previousValue, currentValue) => previousValue + currentValue;<br><br>
+
+                // 1 + 2 + 3 + 4<br>
+                console.log(array1.reduce(reducer));<br>
+                // expected output: 10<br><br>
+
+                // 5 + 1 + 2 + 3 + 4<br>
+                console.log(array1.reduce(reducer, 5));<br>
+                // expected output: 15<br>
+            </code>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
